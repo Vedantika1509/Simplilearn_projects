@@ -1,0 +1,10 @@
+Êþº¾   2 n  &com/vedantika/training/LoginAutomation  java/lang/Object <init> ()V Code
+  	   LineNumberTable LocalVariableTable this (Lcom/rushikesh/training/LoginAutomation; login RuntimeVisibleAnnotations Lorg/testng/annotations/Test;  webdriver.chrome.driver
+    java/lang/System   getProperty &(Ljava/lang/String;)Ljava/lang/String;  'org/openqa/selenium/chrome/ChromeDriver
+  	    org/openqa/selenium/WebDriver   ! manage )()Lorg/openqa/selenium/WebDriver$Options; # % $ %org/openqa/selenium/WebDriver$Options & ' window (()Lorg/openqa/selenium/WebDriver$Window; ) + * $org/openqa/selenium/WebDriver$Window ,  maximize . *https://www.browserstack.com/users/sign_in  0 1 2 get (Ljava/lang/String;)V 4 user_email_Login
+ 6 8 7 org/openqa/selenium/By 9 : id ,(Ljava/lang/String;)Lorg/openqa/selenium/By;  < = > findElement :(Lorg/openqa/selenium/By;)Lorg/openqa/selenium/WebElement; @ user_password B commit
+ 6 D E : name G java/lang/CharSequence I abc@gmail.com K M L org/openqa/selenium/WebElement N O sendKeys ([Ljava/lang/CharSequence;)V Q your_password K S T  click V 'https://live.browserstack.com/dashboard  X Y Z getCurrentUrl ()Ljava/lang/String;
+ \ ^ ] org/testng/Assert _ ` assertEquals '(Ljava/lang/String;Ljava/lang/String;)V driver Lorg/openqa/selenium/WebDriver; username  Lorg/openqa/selenium/WebElement; password 	actualUrl Ljava/lang/String; expectedUrl 
+SourceFile LoginAutomation.java InnerClasses Options Window !               /     *· ±    
+       	                                „¸ W» Y· L+¹  ¹ " ¹ ( +-¹ / +3¸ 5¹ ; M+?¸ 5¹ ; N+A¸ C¹ ; :,½ FYHS¹ J -½ FYPS¹ J ¹ R U:+¹ W :¸ [±    
+   :           &  2  >  K  Z  i  p  t  |  ƒ     H    „      v a b  2 R c d  > F e d  K 9  d  t  f g  |  h g   i    j k     #  l	 )  m	
